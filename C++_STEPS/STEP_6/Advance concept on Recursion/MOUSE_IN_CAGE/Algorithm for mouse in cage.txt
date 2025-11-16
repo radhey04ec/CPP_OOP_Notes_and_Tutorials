@@ -1,0 +1,10 @@
+Mouse in Cage (Using Recursion)
+
+1)We need one function to know is it safe to move given x,y ?
+>>This function will verify given X and Y is within Cage size and with block value '1'.
+
+2)recursive function for finding path
+>> Take given X and Y, check is it possible to move using first function, if yes update solution with value 1.
+>> Move Right side, x++, if possible to move return true
+>> Move Down side, y++ and back to original point x--, if possible to move return true
+>> Other wise return false with soultion value 0.

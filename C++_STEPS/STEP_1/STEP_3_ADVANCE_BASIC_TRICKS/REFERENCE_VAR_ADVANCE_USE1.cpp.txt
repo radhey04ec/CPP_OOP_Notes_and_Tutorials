@@ -1,0 +1,29 @@
+//Use of Reference - Advance
+//Jaydeep Shah <radhey04ec@gmail.com>
+
+#include<iostream>
+using namespace std;
+
+
+
+//simpel Array
+int ARRAY[] ={10,20,30,40,50};
+
+
+ //Function which get int ARRAY and Index as argument, and return related index location
+ //Here int temp[] is another way to write int *temp.Both are similar
+ int& change_of_given_index(int temp[],int index)
+ {
+ 	return (temp[index]);
+ }
+
+int main()
+{
+	//Change First element of Array.
+	change_of_given_index(ARRAY,1) = 100;
+	
+	//Lets print it
+	printf("%d",ARRAY[1]);
+	
+	return 0;
+}

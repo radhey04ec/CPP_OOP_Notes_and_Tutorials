@@ -1,0 +1,37 @@
+Tower of Hanoi (How code work)
+Jaydeep Shah - radhey04ec@gmail.com
+
+>> If only one RING in Source Pole
+MOVE 1 'A' to 'C'   
+
+
+>> If two Ring
+MOVE 1 'A' to 'B'
+MOVE 2 'A' to 'C'  (#CASE - 1 if only one RING)
+MOVE 1 'B' to 'C'
+
+>>If three Ring
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>>PART#1
+MOVE 1 'A' to 'C'
+MOVE 2 'A' to 'B'
+MOVE 1 'C' to 'A'
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+Now Base Condition
+MOVE 3 'A' to 'C'  (#CASE -1 if only one ring in Source)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+>>PART#2
+MOVE 1 'B' to 'A'
+MOVE 2 'B' to 'C'
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+Now Base Condition
+MOVE 1 'A' to 'C' (#CASE -1 if only one ring in Source)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+From Above two example,Some Important observation
+1)Two Recursive Funcition call required
+2)In first call We moved n-1 Ring from Source(A) to Aux(B) and then MOVE Last Ring from Source to DEST.
+So 'A' = SOURCE, 'B' = DEST, 'C'= AUX
+3)In Second call we moved n-1 Ring from AUX to Dest, using A
+So 'A' act like AUX, 'B' = SOURCE , 'C' = DEST 
+
