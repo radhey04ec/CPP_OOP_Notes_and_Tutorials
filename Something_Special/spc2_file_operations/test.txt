@@ -1,0 +1,2 @@
+This string is written into file using C++ code
+This is second line written into file using code
